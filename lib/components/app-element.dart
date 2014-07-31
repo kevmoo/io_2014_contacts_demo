@@ -10,8 +10,12 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('app-element')
 class AppElement extends PolymerElement with Observable {
-  @published String syncId;
-  @observable App app;
+  @published
+  String get syncId => readValue(#syncId);
+  void set syncId(String value) => writeValue(#syncId, value);
+
+  @observable
+  App get app => readValue(#app);
 
   AppElement.created() : super.created() {
 
@@ -39,7 +43,7 @@ class AppElement extends PolymerElement with Observable {
 
   void _loadApp(Sync sync) {
     assert(app == null);
-    app = new App(sync: sync);
+    writeValue(#app, new App(sync: sync));
   }
 
   void _polymerReady() {

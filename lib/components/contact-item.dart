@@ -5,7 +5,9 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('contact-item')
 class ContactItem extends PolymerElement {
-  @published Contact contact;
+  @published
+  Contact get contact => readValue(#contact);
+  void set contact(Contact value) => writeValue(#contact, value);
 
   ContactItem.created() : super.created();
 
