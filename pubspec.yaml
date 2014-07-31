@@ -1,8 +1,13 @@
-name: contacts
-description: A sample web application
+name: io_2014_contacts_demo
+version: 0.0.1
+author: Kevin Moore <kevmoo+github@google.com>
+description: Dart, Polymer, Paper Sample App from Google IO 2014
+homepage: https://github.com/kevmoo/io_2014_contacts_demo
+environment:
+  sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  polymer: '>=0.12.0 <0.13.0'
   paper_elements: '>=0.1.0 <0.2.0'
+  polymer: '>=0.12.0 <0.13.0'
 transformers:
 - polymer:
     entry_points:
