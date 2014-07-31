@@ -1,0 +1,59 @@
+<link rel="import" href="../../../packages/polymer/polymer.html">
+<link rel="import" href="../../../packages/paper_elements/paper_button.html">
+<link rel="import" href="../../../packages/paper_elements/paper_checkbox.html">
+<link rel="import" href="../../../packages/paper_elements/paper_input.html">
+
+<polymer-element name='contact-edit'>
+  <template>
+    <style>
+    :host {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .inputs > * {
+      display: inline-block;
+    }
+    .inputs > div {
+      display: block;
+    }
+    paper-button.colored {
+      color: #4285f4;
+      fill: #4285f4;
+    }
+    paper-button.cancel {
+      color: #DB4437;
+      fill: #DB4437;
+      margin-left: 50px;
+    }
+    paper-checkbox[label=Important] {
+      margin: 20px;
+      margin-bottom: 40px;
+    }
+    paper-button[label=New] {
+      color: #4285f4;
+      fill: #4285f4;
+    }
+    .hidden {
+      display: none;
+    }
+    </style>
+    <paper-button label="New" on-click="{{openAction}}" class="{{ open ? 'hidden' : '' }}"></paper-button>
+    <div class="inputs {{ open ? '' : 'hidden' }}">
+      <paper-input label="Name" inputValue='{{name}}'></paper-input>
+      <paper-input label="Notes" inputValue='{{notes}}'></paper-input>
+      <paper-checkbox label="Important" checked='{{important}}'></paper-checkbox>
+      <div class='buttons'>
+        <paper-button raisedbutton class="colored" label="Save" on-click="{{saveAction}}"></paper-button>
+        <paper-button raisedbutton class="cancel" label="Cancel" on-click="{{cancelAction}}"></paper-button>
+      </div>
+    </div>
+  </template>
+
+  <script type='application/dart' src='contact-edit.dart'></script>
+</polymer-element>

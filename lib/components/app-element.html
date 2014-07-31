@@ -1,0 +1,27 @@
+<link rel="import" href="../../../packages/polymer/polymer.html">
+<link rel="import" href="contact-item.html">
+<link rel="import" href="contact-edit.html">
+<polymer-element name='app-element'>
+  <template>
+    <style>
+      :host {
+        display: block;
+        max-width: 450px;
+      }
+      #contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    </style>
+    <contact-edit on-save='{{saveHandler}}'></contact-edit>
+    <section id='contacts'>
+      <template repeat='{{app.contacts}}'>
+        <contact-item contact='{{}}'></contact-item>
+      </template>
+    </section>
+
+  </template>
+
+  <script type='application/dart' src='app-element.dart'></script>
+</polymer-element>
