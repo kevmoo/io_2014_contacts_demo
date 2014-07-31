@@ -3,9 +3,9 @@ library contacts.components.app_element;
 import 'dart:async';
 import 'dart:html';
 
-import 'package:contacts/src/app.dart';
-import 'package:contacts/src/contact.dart';
-import 'package:contacts/src/sync.dart';
+import 'package:io_2014_contacts_demo/src/app.dart';
+import 'package:io_2014_contacts_demo/src/contact.dart';
+import 'package:io_2014_contacts_demo/src/sync.dart';
 import 'package:polymer/polymer.dart';
 
 @CustomTag('app-element')

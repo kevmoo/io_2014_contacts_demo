@@ -1,6 +1,6 @@
 library contacts.components.contact_edit;
 
-import 'package:contacts/src/contact.dart';
+import 'package:io_2014_contacts_demo/src/contact.dart';
 import 'package:polymer/polymer.dart';
 
 @CustomTag('contact-edit')

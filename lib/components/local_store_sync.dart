@@ -4,8 +4,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 
-import 'package:contacts/src/contact.dart';
-import 'package:contacts/src/sync.dart';
+import 'package:io_2014_contacts_demo/src/contact.dart';
+import 'package:io_2014_contacts_demo/src/sync.dart';
 import 'package:polymer/polymer.dart';
 
 const _JSON_ENCODER = const JsonEncoder.withIndent('  ');
