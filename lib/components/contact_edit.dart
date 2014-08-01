@@ -5,20 +5,10 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('contact-edit')
 class ContactEdit extends PolymerElement with Observable {
-  @published
-  bool get open => readValue(#open, () => false);
-
-  @observable
-  String get name => readValue(#name, () => '');
-  void set name(String value) => writeValue(#name,  value);
-
-  @observable
-  String get notes => readValue(#notes, () => '');
-  void set notes(String value) => writeValue(#notes,  value);
-
-  @observable
-  bool get important => readValue(#important, () => '');
-  void set important(bool value) => writeValue(#important,  value);
+  @published bool open = false;
+  @observable String name;
+  @observable String notes;
+  @observable bool important;
 
   ContactEdit.created() : super.created();
 
@@ -29,7 +19,7 @@ class ContactEdit extends PolymerElement with Observable {
 
   void openAction() {
     assert(!open);
-    writeValue(#open, true);
+    open = true;
   }
 
   void saveAction() {
@@ -47,6 +37,6 @@ class ContactEdit extends PolymerElement with Observable {
     name = '';
     notes = '';
     important = false;
-    writeValue(#open, false);
+    open = false;
   }
 }
