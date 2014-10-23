@@ -38,7 +38,7 @@
       font-size: 120%;
     }
 
-    paper-button[label=Remove] {
+    paper-button#remove {
       opacity: 0.3;
       font-size: 50%;
       float: right;
@@ -46,7 +46,7 @@
     </style>
     <div class="item paper-shadow-top-z-1 {{ {'important': contact.important} }}">
       <paper-shadow z="1"></paper-shadow>
-      <paper-button label="Remove" on-click="{{removeAction}}"></paper-button>
+      <paper-button id='remove' on-click="{{removeAction}}">Remove</paper-button>
       <div class='name'>{{contact.name}}</div>
       <div class='notes'>{{contact.notes}}</div>
     </div>

@@ -43,14 +43,14 @@
       display: none;
     }
     </style>
-    <paper-button label="New" on-click="{{openAction}}" class="{{ open ? 'hidden' : '' }}"></paper-button>
+    <paper-button on-click="{{openAction}}" class="{{ open ? 'hidden' : '' }}">New</paper-button>
     <div class="inputs {{ open ? '' : 'hidden' }}">
       <paper-input label="Name" inputValue='{{name}}'></paper-input>
       <paper-input label="Notes" inputValue='{{notes}}'></paper-input>
       <paper-checkbox label="Important" checked='{{important}}'></paper-checkbox>
       <div class='buttons'>
-        <paper-button raisedbutton class="colored" label="Save" on-click="{{saveAction}}"></paper-button>
-        <paper-button raisedbutton class="cancel" label="Cancel" on-click="{{cancelAction}}"></paper-button>
+        <paper-button raised class="colored" on-click="{{saveAction}}">Save</paper-button>
+        <paper-button raised class="cancel" on-click="{{cancelAction}}">Cancel</paper-button>
       </div>
     </div>
   </template>
